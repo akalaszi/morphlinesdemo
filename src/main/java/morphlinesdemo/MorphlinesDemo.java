@@ -1,5 +1,4 @@
 /*
- *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -21,16 +20,12 @@ import com.cloudera.cdk.morphline.api.*;
 import com.cloudera.cdk.morphline.base.*;
 import com.cloudera.cdk.morphline.base.Compiler;
 
-/**
- * Sample program that illustrates how to use the API to embed and execute a
- * morphline in a host system
- */
 public class MorphlinesDemo {
 
 	public static void main(String[] args) throws IOException {
 
-		File morphlineFile = fileFrom("readLine.conf");
-//		File morphlineFile = fileFrom("readMultiLine.conf");
+//		File morphlineFile = fileFrom("readLine.conf");
+		File morphlineFile = fileFrom("readMultiLine.conf");
 		
 		File inputFile = fileFrom("input.txt");
 
