@@ -1,5 +1,4 @@
 /*
- * Copyright 2013 Cloudera Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.cloudera.morphlinedemo;
+package morphlinesdemo;
 
 import java.io.*;
 import java.net.URISyntaxException;
@@ -26,14 +25,12 @@ import com.cloudera.cdk.morphline.base.Compiler;
  * Sample program that illustrates how to use the API to embed and execute a
  * morphline in a host system
  */
-public class MorphlineDemo {
+public class MorphlinesDemo {
 
 	public static void main(String[] args) throws IOException {
 
-//		File morphlineFile = fileFrom("readLine.conf");
+		File morphlineFile = fileFrom("readLine.conf");
 //		File morphlineFile = fileFrom("readMultiLine.conf");
-		File morphlineFile = fileFrom("morphline.conf");
-		
 		
 		File inputFile = fileFrom("input.txt");
 
@@ -63,7 +60,7 @@ public class MorphlineDemo {
 
 	private static File fileFrom(String name) throws IOException  {
 		try {
-			return new File(MorphlineDemo.class.getResource(name).toURI().getPath());
+			return new File(MorphlinesDemo.class.getResource(name).toURI().getPath());
 		} catch (URISyntaxException e) {
 			throw new IOException(e);
 		}
